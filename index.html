@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="colors.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="fun.js"></script>
+  </head>
+
+  <body>
+    <section class="flex-container" id="title-screen">
+
+      <svg viewBox="0 0 600 300">
+        <symbol id="s-text">
+          <text text-anchor="middle"
+                x="50%" y="45%" dy=".35em">
+            DOA</text>
+        </symbol>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <text text-anchor="middle"
+          x="51%" y="85%" dy=".15em" font-size=".1em" class="tagline-text">
+          FRONT-END &AMP; JAVASCRIPT ENGINEER IN NYC</text>
+      </svg>
+
+      <div class="overlay"></div>
+      <div class="flex-item" id="left"></div>
+      <div class="flex-item" id="center"></div>
+      <div class="flex-item" id="right"></div>
+    </section>
+
+
+    <section class="flex-container" id="photo-screen">
+      <div class="flex-item" id="left"></div>
+      <div class="flex-item" id="right">
+        <div id="photo-header">PURPOSE</div>
+        <br />
+        <div><p>I was in the first grade when I began tweaking and writing algorithms to generate fractal art on my
+          uncle's computer. <span>I saw no division between science and art then, and I still don't.</span></p>
+        <p>The front-end allows me to combine my passion for data structures, editorial design, fashion and culture on the exciting,
+          ever-changing canvas of the browser. </p></div>
+      </div>
+    </section>
+
+
+    <section class="flex-container-row" id="resume-screen">
+      <div class="flex-item-row" id="resume-header">WRK&EDU</div>
+      <div class="flex-item-row" id="first-row">
+        <div class="exp-item" id="blank"></div>
+        <div class="exp-item" id="beacon">
+          <span class="exp-title">STARTUP <span>2016-NOW</span></span>
+          <p class="exp-job">
+            Lead Front-End Engineer<br />
+            at <i>Fohr Card</i>
+          </p>
+        </div>
+        <div class="exp-item" id="qubit">
+          <span class="exp-title">STARTUP <span>2015-2016</span></span>
+          <p class="exp-job">
+            Lead Front-End Engineer<br />
+            at <i>Beacon</i>
+          </p>
+        </div>
+      </div>
+      <div class="flex-item-row" id="second-row">
+        <div class="exp-item" id="skills">
+          <span class="exp-title skills">SKILLS</span>
+            <p class="exp-job">
+              Javascript + Frameworks (ReactJS)<br />
+              HTML, CSS &AMP; Preprocessors<br />
+              Grid Systems (Flexbox, Foundation, etc)<br />
+              Github &AMP; Version Control<br/>
+              Amazon Web Services<br />
+            </p>
+        </div>
+        <div class="exp-item" id="mks" style="margin-left: -1em">
+          <span class="exp-title">STARTUP <span>2014-2015</span></span>
+            <p class="exp-job">
+              Client Engineer <br />
+              &AMP; Scrum Master<br />
+              at <i>Qubit</i>
+            </p>
+        </div>
+        <div class="exp-item" id="ut">
+          <span class="exp-title edu">EDUCATION <span>07-13</span></span>
+          <p class="exp-job">
+            B.A. Gov &AMP; Journalism<br />
+            at <i>University of Texas at Austin</i><br /><br />
+            Ruby on Rails &AMP; Javascript<br />
+            at <i>Makersquare</i>
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+
+</html>

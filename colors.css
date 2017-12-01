@@ -1,0 +1,261 @@
+/*----------------- Frame & Page Styles -------------------*/
+
+html, body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #FFF0F5;
+  background-size: .2em 100%;
+  font: 14.5em/1 Impact;
+}
+
+
+/*----------------- General Flex Styles -------------------*/
+
+.flex-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.flex-container .flex-item {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container-row {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.flex-container-row .flex-item-row {
+  display: flex;
+  flex: 1 100%;
+  font-size: .5em;
+  margin: 0.25em;
+}
+
+/*.flex-container-row .flex-item-row div {
+  flex-grow: 1;
+}*/
+
+/*----------------- Title Screen Styles -------------------*/
+
+
+#title-screen #left {
+  flex: 0;
+  opacity: 0;
+  background: url('https://s3.amazonaws.com/www.doajafri.com/images/wucFpYh_.jpg') center center;
+  background-size: cover;
+  transition: flex 2s;
+}
+
+#title-screen #center {
+  flex: 3;
+}
+
+#title-screen #right {
+  flex: 5;
+  opacity: 0;
+  background: url('https://s3.amazonaws.com/www.doajafri.com/images/drake-hotline-bling-video-main.jpg');
+  background-position: 20% 50%;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHUlEQVQIW2NkQAOMIP7/D1//Mwpwg9lgAhlgCAAAsnoEBfo/lGsAAAAASUVORK5CYII=) repeat;
+}
+
+
+/*-------- Title Screen: SVG Styles ---------*/
+
+#title-screen svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  animation: fadein 2.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.text {
+  fill: none;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 75 325;
+  stroke-dashoffset: 0;
+  animation: stroke 8s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #F9CABD;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  animation-delay: -6s;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+.tagline-text {
+  fill: black;
+  font-family: Impact;
+}
+
+
+/*----------------- Photo Screen Styles -------------------*/
+
+#photo-screen #left {
+  flex: 1;
+  background: url('portraitpizza.png') center center no-repeat;
+  background-size: 45%;
+}
+
+#photo-screen #right {
+  flex: 1;
+  color: #F9CABD;
+  text-align: right;
+  padding-right: 0.25em;
+  font-size: 0.85em;
+}
+
+#photo-screen #right p {
+  font-family: "Lato", "Times New Roman", Georgia, Serif;
+  font-size: 0.1em;
+  line-height: 1.5em;
+  color: grey;
+  padding-right: 20%;
+  margin-left: -3em;
+  text-align: left;
+}
+
+#photo-screen #right p span {
+  color: #3AA1BF;
+}
+
+#photo-screen #photo-header {
+  font-size: 0.7em;
+}
+
+
+/*----------------- Resume Screen Styles -------------------*/
+
+#resume-screen #resume-header {
+  color: #F9CABD;
+  align-items: flex-end;
+  font-size: 0.5em;
+}
+
+#resume-screen #first-row, #resume-screen #second-row {
+  font-family: "Lato", "Times New Roman", Georgia, Serif;
+  font-size: 0.12em;
+  line-height: 1.5em;
+}
+
+#resume-screen .exp-item {
+  flex: 1;
+  font-size: 0.8em;
+}
+
+#resume-screen .exp-item#skills {
+  margin-left: 1em;
+}
+
+#resume-screen .exp-item .exp-job {
+  line-height: normal;
+}
+
+#resume-screen .exp-title {
+  display: block;
+  width: 70%;
+  border-bottom: thick solid #F2385A;
+}
+
+#resume-screen .edu {
+  border-bottom: thick solid #3AA1BF;
+}
+
+#resume-screen .skills {
+  border-bottom: thick solid #F5A503;
+}
+
+#resume-screen .exp-title span {
+  font-size: 0.7em;
+  padding-left: 0.5em;
+}
+
+#resume-screen #blank, #resume-screen #skills {
+  flex: 2;
+}
+
+
+/*----------------- Preload Images -------------------*/
+
+.preload-images {
+  display: none;
+  width: 0;
+  height: 0;
+  background: url(https://pbs.twimg.com/profile_images/645717494339104768/wucFpYh_.jpg),
+              url(http://www.glamour.com/images/entertainment/2015/10/drake-hotline-bling-video-main.jpg);
+}
+
+
+/*-------- Second index playing ---------*/
+
+#title-screen2 svg {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  font-family: 'Sonsie One', cursive;
+}
+
+.tagline-text3 {
+  font-family: 'Sonsie One', cursive;
+
+}
+
+.tagline-text5 {
+  fill: white;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.tagline-text6 {
+  fill: #d3d3d3;
+}
